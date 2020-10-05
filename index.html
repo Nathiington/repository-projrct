@@ -1,0 +1,135 @@
+<!DOCTYPE html >
+<html>
+    <head>
+    <title>BIUST Research Repository</title>
+
+    <link rel="stylesheet" type="text/css" href="css/formstyle.css">
+    </head>
+        <header>
+            <div class="main">
+                <div class = "logo">
+                    <img src="biust_logo_white.png" alt="biust_logo" width="225dp" height="100dp">
+                </div>
+                <ul>
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="data_sets.php">Data Sets</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contactus.html">Contact Us</a></li>
+                  <li><a href="citationpolicy.html">Citation Policy</a></li>
+                </ul>
+            </div>
+              </header>
+            <body>
+            <div class = "title">
+                <h1 style="text-align: center;">Data Repository</h1>
+            </div>
+            <div class="button">
+             <a href="#" class="btn" onclick="document.getElementById('login').style.display='block'">LOG IN</a>
+             <a href="#" class="btn" onclick="document.getElementById('signup').style.display='block'">SIGN UP</a>
+            </div>
+             <div id="signup" class="modal">
+               <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+               <form class="modal-content" action="signup.php" method="post">
+                 <div class="containerr">
+                   <h1>Sign Up!</h1>
+                   <p>Please create an account.</p>
+                   <hr>
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" placeholder="Username" name="username" required>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Email" name="email" required>
+
+                    <label for="pwd"><b>Password</b></label>
+                    <input type="password" placeholder="Password" name="pwd" id="myInput" required>
+                    <input type="checkbox" onclick="checkpwd()">Show Password</input> <br><br>
+                    <label for="pwd-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="pwd-repeat" id="myInputt" required>
+                    <input type="checkbox" onclick="checkpwdd()">Show Password
+
+                   <div class="clearfix">
+                     <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Cancel</button>
+                     <button type="submit" class="signupbtn" name="signup-submit">Sign Up</button>
+                   </div>
+                 </div>
+               </form>
+             </div>
+
+
+             <div id="login" class="modal">
+               <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+               <form class="modal-content" action="login.php" method="post">
+                 <div class="containerr">
+                   <h1>Log In</h1>
+                   <p>Please log in.</p>
+                   <hr>
+                   <label for="email"><b>Email</b></label>
+                   <input type="text" placeholder="Email" name="email" required>
+
+                  <label for="pwd"><b>Password</b></label>
+                  <input type="password" placeholder="Password" name="pwd" id="myInputtt"required>
+                  <input type="checkbox" onclick="checkpwddd()">Show Password
+                   <div class="clearfix">
+                     <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                     <button type="submit" class="signupbtn" name="login-submit">Log In</button>
+                   </div>
+                 </div>
+               </form>
+             </div>
+
+            <script>
+          var modal = document.getElementById('signup');
+          // When the user clicks anywhere outside of the container, close it
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+          </script>
+          <!--<script>
+          var modal = document.getElementById('login');
+          // When the user clicks anywhere outside of the container, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+          }
+          </script>-->
+          <script>
+          function checkpwd() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password")
+            {
+              x.type = "text";
+            }
+            else {
+              x.type = "password";
+            }
+          }
+          </script>
+          <script>
+          function checkpwdd() {
+            var x = document.getElementById("myInputt");
+            if (x.type === "password")
+            {
+              x.type = "text";
+            }
+            else {
+              x.type = "password";
+            }
+          }
+          </script>
+          <script>
+          function checkpwddd() {
+            var x = document.getElementById("myInputtt");
+            if (x.type === "password")
+            {
+              x.type = "text";
+            }
+            else {
+              x.type = "password";
+            }
+          }
+          </script>
+
+    </body>
+</html>
